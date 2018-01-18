@@ -18,8 +18,6 @@ var stackMethods = {
 	}
 };
 
-var extend = function(obj, methods) {
-    for (var key in methods) {
-    	obj[key] = methods[key];
-    }
-};
+var stack = Stack();
+
+stack.pop()

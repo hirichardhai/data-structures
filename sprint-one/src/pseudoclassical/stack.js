@@ -1,5 +1,5 @@
 var Stack = function() {
-
+	this.x;
 };
 
 Stack.prototype.push = function(value) {
@@ -17,3 +17,4 @@ Stack.prototype.pop = function() {
 Stack.prototype.size = function() {
 	return Object.keys(this).length;
 }
+
