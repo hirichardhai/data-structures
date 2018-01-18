@@ -1,5 +1,5 @@
 var Stack = function() {
-	this.x;
+	this.x
 };
 
 Stack.prototype.push = function(value) {
