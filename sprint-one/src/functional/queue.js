@@ -22,9 +22,6 @@ var Queue = function() {
       }
     }
     return tempValue;
-    // var tempStorage = storage[Object.keys(storage).length - 1];
-    // delete storage[Object.keys(storage).length - 1]
-    // return tempStorage;
   };
 
   someInstance.size = function() {
