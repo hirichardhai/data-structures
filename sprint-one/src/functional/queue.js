@@ -18,6 +18,7 @@ var Queue = function() {
       storage[i] = storage[i + 1];
     };
     
+    delete storage[size];
   };
 
   someInstance.size = function() {
