@@ -8,17 +8,19 @@ var Queue = function() {
 
   someInstance.enqueue = function(value) {
     let size = someInstance.size();
-    storage.size = value;
+    storage[size] = value;
   };
 
   someInstance.dequeue = function() {
     let size = someInstance.size();
+    let valueToDelete = storage[0];
 
     for (let i = 0; i < size; i += 1) {
       storage[i] = storage[i + 1];
     };
     
-    delete storage[size];
+    delete storage[size - 1];
+    return valueToDelete;
   };
 
   someInstance.size = function() {
