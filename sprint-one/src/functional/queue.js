@@ -16,7 +16,8 @@ var Queue = function() {
     let valueToDelete = storage[0];
 
     for (let i = 0; i < size; i += 1) {
-      storage[i] = storage[i + 1];
+      storage[i] = storage[
+        +i + 1];
     };
     
     delete storage[size - 1];
