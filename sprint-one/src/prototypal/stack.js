@@ -1,46 +1,30 @@
 var Stack = function() {
-<<<<<<< HEAD
   // Hey! Rewrite in the new style. Your code will wind up looking very similar,
   // but try not not reference your old code in writing the new style.
-  let instance = Object.create(stackMethods);
+  var obj = Object.create(stackMethods);
+  obj.count = 0;
+  obj.storage = {};
 
-  return instance;
+  return obj;
 };
 
 var stackMethods = {
-  size: function() {
-    return Object.keys(this).length;
+  push : function(value) {
+    this.storage[this.count] = value;
+    this.count++;
   },
-  pop: function() {
-    let value = this[this.size() - 1];
-    delete this[this.size() - 1];
-    return value;
+  pop : function() {
+    var temp = this.storage[this.count - 1];
+
+    delete this.storage[this.count - 1];
+
+    if(this.count !== 0){
+      this.count--;
+    }
+
+    return temp;
   },
-  push: function(value) {
-    let size = this.size();
-    this[size] = value;
+  size : function() {
+    return this.count;
   }
-=======
-	var obj = Object.create(stackMethods);
-
-	return obj;
 };
-
-var stackMethods = {
-	push: function(value) {
-		this[Object.keys(this).length] = value;
-	},
-	pop: function() {
-		var tempStorage = this[Object.keys(this).length - 1];
-	    delete this[Object.keys(this).length - 1]
-	    return tempStorage;
-	},
-	size: function() {
-		return Object.keys(this).length;
-	}
->>>>>>> 3b614d42c155400204617788a15b969a4c9159e7
-};
-
-var stack = Stack();
-
-stack.pop()
