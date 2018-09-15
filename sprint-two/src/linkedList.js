@@ -11,6 +11,7 @@ var LinkedList = function() {
       list.tail = newNode;
       list.count++;
     } else {
+      // this list.tail evaluates to list.head as well so line 15 creates the list.head.next pointer from head to next node
       list.tail.next = newNode;
       list.tail = newNode;
       list.count++;
