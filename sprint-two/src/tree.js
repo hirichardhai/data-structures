@@ -18,6 +18,7 @@ treeMethods.contains = function(target) {
     return true;
   } else {
     for (var i = 0; i < this.children.length; i++) {
+      // we add this into an if statement since if we have 4[5[7],6[8]] and serach for 8, we will hit a hit node 7 and return a false and exit iterating to child node 6 to check for 8
       if (this.children[i].contains(target)) {
         return true;
       }
